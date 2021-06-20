@@ -15,7 +15,7 @@ This repository  contains a fairly organized notebook called `AllinOne.ipynb` th
 5. Training a custom 2D model from Tensorflow 1's object detection API.
 6. Measuring translation vector accuracy*.
 
-** * **: Other estimations are evaluated while and after training models (both 2D and 3D). However, since the translation vector is regressed through geometry connstraints, it can only be evaluated separately. 
+*\**: Other estimations are evaluated while and after training models (both 2D and 3D). However, since the translation vector is regressed through geometry connstraints, it can only be evaluated separately. 
 
 **Note**: You may also view the notebook in Github website. If it fails to load, hit reload.
 
@@ -41,6 +41,27 @@ The rest of the workflow, such as setting up the environment, creating TFRecords
 For implementing this section, I started with an unofficial implementation (check the references). My main focus was to make modifications for improving the accuracy of the model. I also tried my best to clean up the code. I also made sure that most of the functions and segments are documented. In the future, I try to add brief descriptions to this readme as well. Indeed, it is best to read the original paper and implement it yourself with as few hints as possible.
 
 My final results are described in table 2 and 3. The final 3D boxes can be seen in figure 2.
+
+
+
+Figure 1
+
+![1_2D](https://github.com/m-parchami/3DVehicleDetection/samples/2D/2_2D.png)
+![2_2D](https://github.com/m-parchami/3DVehicleDetection/samples/2D/7_2D.png)
+![3_2D](https://github.com/m-parchami/3DVehicleDetection/samples/2D/9_2D.png)
+![4_2D](https://github.com/m-parchami/3DVehicleDetection/samples/2D/10_2D.png)
+![5_2D](https://github.com/m-parchami/3DVehicleDetection/samples/2D/12_2D.png)
+![6_2D](https://github.com/m-parchami/3DVehicleDetection/samples/2D/14_2D.png)
+
+
+Figure 2
+
+![1_3D](https://github.com/m-parchami/3DVehicleDetection/samples/2D/2_3D.png)
+![2_3D](https://github.com/m-parchami/3DVehicleDetection/samples/2D/7_3D.png)
+![3_3D](https://github.com/m-parchami/3DVehicleDetection/samples/2D/9_3D.png)
+![4_3D](https://github.com/m-parchami/3DVehicleDetection/samples/2D/10_3D.png)
+![5_3D](https://github.com/m-parchami/3DVehicleDetection/samples/2D/12_3D.png)
+![6_3D](https://github.com/m-parchami/3DVehicleDetection/samples/2D/14_3D.png)
 
 # References
 ### Papers and Datasets
