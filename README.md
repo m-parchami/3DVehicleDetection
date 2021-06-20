@@ -1,21 +1,21 @@
 # 3DVehicleDetection
 
 ### Introduction
-The main purpose of this repository is to provide an unofficial implementation of the 3D vehicle detection framework discussed in "3D Bounding Box Estimation Using Deep Learning and Geometry". You can access the paper [here](https://arxiv.org/abs/1612.00496v1).
+The main purpose of this repository is to provide an unofficial implementation of the 3D vehicle detection framework introduced in the "[3D Bounding Box Estimation Using Deep Learning and Geometry](https://arxiv.org/abs/1612.00496v1)" paper.
 
-The paper focuses on 2D to 3D bounding box estimation. However, we also look into the 2D detection part, train our own model with Tensorflow Object Detection API, and test it together with the rest of the framework.
+The paper mainly focuses on the 3D bounding box estimation from given 2D detections. However, in this repository, we also look into the 2D detection part, train our own model with Tensorflow Object Detection API, and test it together with the rest of the framework.
 
-I tried my best to make this into a complete tutorial in each section so it can serve different questionns. I hope you find what you are looking for without getting too bored.
+I tried my best to make this into a complete tutorial for each section so it can answer different questions. I hope you find what you are looking for without getting too bored. Do not hesitate on creating issues or contacting me for any question/suggestion on the code.
 
-This repository  contains a fairly organized notebook called `AllinOne.ipynb`that you can run on Google Colab without worrying about anything (not even the dataset). This notebook goes through these tasks:
+This repository  contains a fairly organized notebook called `AllinOne.ipynb` that you can run on Google Colab without worrying too much about anything. The notebook goes through these tasks:
 1. Getting and preparing dataset.
-2. Defining the 2D to 3D model (the paper).
-3. Using a pre-trained model from Tensorflow 1's model zoo for 2D detection
+2. Implementing the 2D to 3D model (from the paper) together with its pre-processing and post-processing.
+3. Using a pre-trained model from Tensorflow 1's model zoo for 2D detection.
 4. Visually evaluating 3D model's performance on boxes detected by part 3.
 5. Training a custom 2D model from Tensorflow 1's object detection API.
 6. Measuring translation vector accuracy*.
 
-** * **: Other estimations are evaluated while and after training models (both 2D and 3D). However, since the translation vector is regressed through geometry connstraints, it should be evaluated separately. 
+** * **: Other estimations are evaluated while and after training models (both 2D and 3D). However, since the translation vector is regressed through geometry connstraints, it can only be evaluated separately. 
 
 **Note**: You may also view the notebook in Github website. If it fails to load, hit reload.
 
@@ -23,20 +23,24 @@ In the following, I provide a brief documentation on the implementation of diffe
 
 # 2D Vehicle Detection
 ## What we do here
-Here we want to receive images and detect cars, vans and trucks present in the scene in 2D (a 2D bounding box). We also need to classify the detected patches from among the same classes (cars, vans, trucks). Later, when we estimate vehicle dimensions, these classes will be used to apply mean.
+Here we want to receive images and detect cars, vans and trucks in the scene in 2D (with a 2D bounding box). We also need to classify the detected patches from among the same classes (cars, vans, trucks). Later, when we estimate vehicle dimensions, these classes are needed.
 
 ## How we do it
-Since 2D object detection is a well-addressed problem nowadays, we try to keep things as simple as possible. That is, we try to use high level APIs and pretrained models to the best we can so that we can focus on our main purpose: the 3D part!
+Since 2D object detection is an already well-addressed problem, we try to keep things simple. That is, we try to use high level APIs and pretrained models to the best we can so that we can focus on our main purpose: the 3D part!
 
-We can start from Tensorflow 1's model zoo that has a Faster RCNN checkpoint trained on KITTI. We can use this to detect cars. However, this checkpoint only classifies betweenn car and pedestrain. Therefore, we cannot classify anything as van or truck with it. Hence, it is not exactly what we need. But we can still use it for cars. This can be sufficient for quick testing of the entire framework.
+We can start from Tensorflow 1's model zoo that has a Faster RCNN checkpoint trained on the KITTI 2D object dataset. We can use this to detect cars. However, the available graph only classifies cars and pedestrain. Therefore, we cannot classify anything as van or truck with it. Hence, it is not exactly what we are looking for. Nevertheless, we can use it for cars and it can be sufficient for quick testing of the entire framework. Having this in mind, the notebook first uses this checkpoint for evaluating the whole framework.
 
-Later, at the end of the notebook, we train our own model using Tensorflow 1 Object Detection API. We can use any object detection checkpoint. Here, we use Mobilenetv2 SSD and Faster RCNN (Resnet 101) models. Training with this API, required fixing some paths and some training configurations. The pipeline.config files provided in this repo, serve as the training configurations and the paths are almost handled in the notebook.
+Later, at the end of the notebook, we train our own model using Tensorflow 1 Object Detection API. Of course, we are free to use any object detection checkpoint. In this repository, we use Mobilenetv2+SSD and Faster RCNN (Resnet 101) models. The former is pre-trained on COCO and the latter is the same discussed in the last paragraph. It makes sense that the Faster RCNN model cann be trained easier, since its feature vectors are more relevant. In table 1, you can view my results on training these models.
 
-The data for training must be connverted to TFRecords. In the notebook, this is done as well. Of course, we rely heavily on the API to do this for us.
+Training with this API requires fixing some paths and some training configurations. The pipeline.config files provided in this repo, serve as the training configurations and the paths are compatible with the rest of the notebook, give or take. In all likelihood, you won't have to make too many changes to them. I appreciate any suggestions and improvement that you can think of for these configurations.
+
+The rest of the workflow, such as setting up the environment, creating TFRecords, extracting frozen graph, and evaluating on test set is also provided in the notebook. The detection results of the Faster RCNN model is presented in figure 1.
 
 # 3D Vehicle Detection
 
-For implementing this section, I started with an unofficial implementaation. I tried to modify different sections to make improvements.
+For implementing this section, I started with an unofficial implementation (check the references). My main focus was to make modifications for improving the accuracy of the model. I also tried my best to clean up the code. I also made sure that most of the functions and segments are documented. In the future, I try to add brief descriptions to this readme as well. Indeed, it is best to read the original paper and implement it yourself with as few hints as possible.
+
+My final results are described in table 2 and 3. The final 3D boxes can be seen in figure 2.
 
 # References
 ### Papers and Datasets
