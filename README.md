@@ -40,12 +40,53 @@ The rest of the workflow, such as setting up the environment, creating TFRecords
 
 For implementing this section, I started with an unofficial implementation (check the references). My main focus was to make modifications for improving the accuracy of the model. I also tried my best to clean up the code. I also made sure that most of the functions and segments are documented. In the future, I try to add brief descriptions to this readme as well. Indeed, it is best to read the original paper and implement it yourself with as few hints as possible.
 
-My final results are described in table 2 and 3. The final 3D boxes can be seen in figure 2.
+My final results are described in table 2 and 3. The final 3D boxes can be seen in figure 1.
 
+## Tables
+### Table 1
+Evaluation results of training two object detectors.
++ Train size: 6981 images.
++ Test size: 500 images.
++ IoU: 0.5
 
+| Model | Previous Dataset | Input Dimensions | Epochs | val AP Car | val AP Van | val AP Truck | mAP |
+| ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+| Faster RCNN (Resnet 101) | KITTI | 300\*993\*3 | 14 | 0.8328 | 0.6252 | 0.6859 | 0.7146 |
+| Movilenetv2 + SSD | COCO | 300\*300\*3 | 63 | 0.6353 | 0.3580 | 0.5497 | 0.5143 |
+
+**Disclaimer**: These results do not necessarily relate to model's overall performance and capabilities. One may achieve better results with each by modifying parameters or longer training. This is not a reliable general comparison of the two models.
+
+### Table 2
+Evaluation results of training the 3D network with two different feature extractors.
++ Train size: 19308 patches extracted directly from the dataset.
++ Test size: 3408 patches extracted directly from the dataset.
++ Confidence error metric: MSE
++ Dimension error metric: MSE
++ Angle error metric: 1 - cos(|pred| - true) (ideal would be 1 - cos(0) = 0)
+
+| Feature extractor | Previous Dataset | Input Dimensions | Epochs | # Parameters | Confidence Error | Angle error | Dimension Error |
+| ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+| VGG-16 | Imagenet | 224\*224\*3 | 15 | 40,411,989 | 0.0076 | 0.0078 | 0.1100 |
+| Movilenetv2 | Imagenet | 224\*224\*3 | 25 | 66,490,453 | 0.0093 | 0.0073 | 0.1084 |
+
+**Disclaimer**: These results do not necessarily relate to model's overall performance and capabilities. One may achieve better results with each by modifying parameters or longer training. This is not a reliable general comparison of the two models.
+
+### Table 3
+Translation vector estimation accuracy.
+
++ Error metric: L2_norm(true - pred)
++ Normalized Error metric: L2_norm( (true - pred) / |true| )
+
+| Max Truncation | Max Occlusion | Min 2D Bbox Width | Min 2D Bbox Height | Final Sample Count | Average Error | Average Normalized Error * |
+| ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+| 0.15 | 1 | 60 | 60 | 967 | 1.8176 | 0.1151 |
+| 0.40 | 1 | 40 | 40 | 1788 | 2.4165 | 0.1168 |
+
+**Disclaimer**: These results do not necessarily relate to the performance of the paper's method. These are just the results that I achieved. For accurate benchmarks, refer to the original paper.
+
+## Figures
 
 ### Figure 1
-
 2D detections are from the fine-tuned Faster RCNN (Resnet 101) model. The model was fine-tuned to detect cars, vans, and trucks.
 3D detections are using Mobilenetv2 backbone as for the feature extractor.
 
