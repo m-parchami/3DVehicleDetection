@@ -46,22 +46,22 @@ My final results are described in table 2 and 3. The final 3D boxes can be seen 
 
 Figure 1
 
-![1_2D](https://github.com/m-parchami/3DVehicleDetection/samples/2D/2_2D.jpeg)
-![2_2D](https://github.com/m-parchami/3DVehicleDetection/samples/2D/7_2D.jpeg)
-![3_2D](https://github.com/m-parchami/3DVehicleDetection/samples/2D/9_2D.jpeg)
-![4_2D](https://github.com/m-parchami/3DVehicleDetection/samples/2D/10_2D.jpeg)
-![5_2D](https://github.com/m-parchami/3DVehicleDetection/samples/2D/12_2D.jpeg)
-![6_2D](https://github.com/m-parchami/3DVehicleDetection/samples/2D/14_2D.jpeg)
+![1_2D](https://github.com/m-parchami/3DVehicleDetection/blob/main/samples/2D/2_2D.jpeg)
+![2_2D](https://github.com/m-parchami/3DVehicleDetection/blob/main/samples/2D/7_2D.jpeg)
+![3_2D](https://github.com/m-parchami/3DVehicleDetection/blob/main/samples/2D/9_2D.jpeg)
+![4_2D](https://github.com/m-parchami/3DVehicleDetection/blob/main/samples/2D/10_2D.jpeg)
+![5_2D](https://github.com/m-parchami/3DVehicleDetection/blob/main/samples/2D/12_2D.jpeg)
+![6_2D](https://github.com/m-parchami/3DVehicleDetection/blob/main/samples/2D/14_2D.jpeg)
 
 
 Figure 2
 
-![1_3D](https://github.com/m-parchami/3DVehicleDetection/samples/3D/2_3D.jpeg)
-![2_3D](https://github.com/m-parchami/3DVehicleDetection/samples/3D/7_3D.jpeg)
-![3_3D](https://github.com/m-parchami/3DVehicleDetection/samples/3D/9_3D.jpeg)
-![4_3D](https://github.com/m-parchami/3DVehicleDetection/samples/3D/10_3D.jpeg)
-![5_3D](https://github.com/m-parchami/3DVehicleDetection/samples/3D/12_3D.jpeg)
-![6_3D](https://github.com/m-parchami/3DVehicleDetection/samples/3D/14_3D.jpeg)
+![1_3D](https://github.com/m-parchami/3DVehicleDetection/blob/main/samples/3D/2_3D.jpeg)
+![2_3D](https://github.com/m-parchami/3DVehicleDetection/blob/main/samples/3D/7_3D.jpeg)
+![3_3D](https://github.com/m-parchami/3DVehicleDetection/blob/main/samples/3D/9_3D.jpeg)
+![4_3D](https://github.com/m-parchami/3DVehicleDetection/blob/main/samples/3D/10_3D.jpeg)
+![5_3D](https://github.com/m-parchami/3DVehicleDetection/blob/main/samples/3D/12_3D.jpeg)
+![6_3D](https://github.com/m-parchami/3DVehicleDetection/blob/main/samples/3D/14_3D.jpeg)
 
 # References
 ### Papers and Datasets
