@@ -95,8 +95,8 @@ Translation vector estimation accuracy.
 ## Figures :eyes:
 
 ### Figure 1
-+ Left: 2D detections are from the fine-tuned Faster RCNN (Resnet 101) model. The model was fine-tuned to detect cars, vans, and trucks.
-+ Right: 3D detections are using Mobilenetv2 backbone as for the feature extractor.
++ Left: 2D detections from the Faster RCNN (Resnet 101) model from tf1 model zoo that I fine-tuned to detect cars, vans, and trucks.
++ Right: 3D detections on the same boxes from left using Mobilenetv2 backbone as for the feature extractor.
 
 <img src="/samples/2D/2_2D.jpeg" width="400"> <img src="/samples/3D/2_3D.jpeg" width="400">
 <img src="/samples/2D/7_2D.jpeg" width="400"> <img src="/samples/3D/9_3D.jpeg" width="400">
