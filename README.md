@@ -1,4 +1,4 @@
-# 3DVehicleDetection
+# 3D Vehicle Detection
 
 ## Table of Contents :deciduous_tree:
 1. [Introduction](./README.md#Introduction)
