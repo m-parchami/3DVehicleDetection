@@ -107,7 +107,7 @@ Translation vector estimation accuracy.
 
 ## Demo :clapper:
 
-![Demo Gif](https://mparchami.com/3D_Vehicle_Detection_demo.gif)
+[Demo Gif](https://mparchami.com/3D_Vehicle_Detection_demo.gif)
 
 # References :clap:
 ### Papers and Datasets
