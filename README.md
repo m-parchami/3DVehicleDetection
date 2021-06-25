@@ -1,6 +1,14 @@
 # 3DVehicleDetection
 
-### Introduction
+## Table of Contents
+1. [Introduction](./README.md#Introduction)
+2. [2D Vehicle Detection](./README.md#2D--Vehicle--Detection)
+3. [3D Vehicle Detection](./README.md#3D--Vehicle--Detection)
+4. [Tables](./README.md#Tables)
+5. [Figures](./README.md#Figures)
+6. [References](./README.md#References)
+
+## Introduction
 The main purpose of this repository is to provide an unofficial implementation of the 3D vehicle detection framework introduced in the "[3D Bounding Box Estimation Using Deep Learning and Geometry](https://arxiv.org/abs/1612.00496v1)" paper.
 
 The paper mainly focuses on the 3D bounding box estimation from given 2D detections. However, in this repository, we also look into the 2D detection part, train our own model with Tensorflow Object Detection API, and test it together with the rest of the framework.
@@ -15,9 +23,9 @@ This repository  contains a fairly organized notebook called `AllinOne.ipynb` th
 5. Training a custom 2D model from Tensorflow 1's object detection API.
 6. Measuring translation vector accuracy*.
 
-*\**: Other estimations are evaluated while and after training models (both 2D and 3D). However, since the translation vector is regressed through geometry connstraints, it can only be evaluated separately. 
+*\** Other estimations are evaluated while and after training models (both 2D and 3D). However, since the translation vector is regressed through geometry connstraints, it can only be evaluated separately. 
 
-**Note**: You may also view the notebook in Github website. If it fails to load, hit reload.
+**Note**: You may also view the notebook in Github website. If it fails to load, hit reload a couple of times.
 
 In the following, I provide a brief documentation on the implementation of different sections.
 
@@ -30,11 +38,11 @@ Since 2D object detection is an already well-addressed problem, we try to keep t
 
 We can start from Tensorflow 1's model zoo that has a Faster RCNN checkpoint trained on the KITTI 2D object dataset. We can use this to detect cars. However, the available graph only classifies cars and pedestrain. Therefore, we cannot classify anything as van or truck with it. Hence, it is not exactly what we are looking for. Nevertheless, we can use it for cars and it can be sufficient for quick testing of the entire framework. Having this in mind, the notebook first uses this checkpoint for evaluating the whole framework.
 
-Later, at the end of the notebook, we train our own model using Tensorflow 1 Object Detection API. Of course, we are free to use any object detection checkpoint. In this repository, we use Mobilenetv2+SSD and Faster RCNN (Resnet 101) models. The former is pre-trained on COCO and the latter is the same discussed in the last paragraph. It makes sense that the Faster RCNN model cann be trained easier, since its feature vectors are more relevant. In table 1, you can view my results on training these models.
+Later, at the end of the notebook, we train our own model using Tensorflow 1 Object Detection API. Of course, we are free to use any object detection checkpoint. In this repository, we use Mobilenetv2+SSD and Faster RCNN (Resnet 101) models. The former is pre-trained on COCO and the latter is the same discussed in the last paragraph. It makes sense that the Faster RCNN model can be trained easier, since its feature vectors are more relevant. In [table 1](./README.md#Tables), you can view my results on training these models.
 
 Training with this API requires fixing some paths and some training configurations. The pipeline.config files provided in this repo, serve as the training configurations and the paths are compatible with the rest of the notebook, give or take. In all likelihood, you won't have to make too many changes to them. I appreciate any suggestions and improvement that you can think of for these configurations.
 
-The rest of the workflow, such as setting up the environment, creating TFRecords, extracting frozen graph, and evaluating on test set is also provided in the notebook. The detection results of the Faster RCNN model is presented in figure 1.
+The rest of the workflow, such as setting up the environment, creating TFRecords, extracting frozen graph, and evaluating on test set is also provided in the notebook. The detection results of the Faster RCNN model is presented in [figure 1](./README.md#Figures).
 
 # 3D Vehicle Detection
 
@@ -89,25 +97,12 @@ Translation vector estimation accuracy.
 ### Figure 1
 2D detections are from the fine-tuned Faster RCNN (Resnet 101) model. The model was fine-tuned to detect cars, vans, and trucks.
 3D detections are using Mobilenetv2 backbone as for the feature extractor.
+<img src="/samples/2D/2_2D.jpeg" width="450"> <img src="/samples/3D/2_3D.jpeg" width="450">
+<img src="/samples/2D/7_2D.jpeg" width="450"> <img src="/samples/3D/9_3D.jpeg" width="450">
+<img src="/samples/2D/9_2D.jpeg" width="450"> <img src="/samples/3D/7_3D.jpeg" width="450">
+<img src="/samples/2D/12_2D.jpeg" width="450"> <img src="/samples/3D/12_3D.jpeg" width="450">
+<img src="/samples/2D/14_2D.jpeg" width="450"> <img src="/samples/3D/14_3D.jpeg" width="450">
 
-![1_2D](/samples/2D/2_2D.jpeg)
-![1_3D](/samples/3D/2_3D.jpeg)
-
-
-![2_2D](/samples/2D/7_2D.jpeg)
-![2_3D](/samples/3D/7_3D.jpeg)
-
-
-![3_2D](/samples/2D/9_2D.jpeg)
-![3_3D](/samples/3D/9_3D.jpeg)
-
-
-![4_2D](/samples/2D/12_2D.jpeg)
-![4_3D](/samples/3D/12_3D.jpeg)
-
-
-![5_2D](/samples/2D/14_2D.jpeg)
-![5_3D](/samples/3D/14_3D.jpeg)
 
 # References
 ### Papers and Datasets
