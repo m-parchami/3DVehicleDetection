@@ -1,5 +1,7 @@
 # 3D Vehicle Detection
 
+![Demo Gif](./samples/demo.gif)
+
 ## Table of Contents :deciduous_tree:
 1. [Introduction](./README.md#Introduction)
 2. [2D Vehicle Detection](./README.md#2D--Vehicle--Detection)
