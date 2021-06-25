@@ -99,8 +99,8 @@ Translation vector estimation accuracy.
 + Right: 3D detections on the same boxes from left using Mobilenetv2 backbone as for the feature extractor.
 
 <img src="/samples/2D/2_2D.jpeg" width="400"> <img src="/samples/3D/2_3D.jpeg" width="400">
-<img src="/samples/2D/7_2D.jpeg" width="400"> <img src="/samples/3D/9_3D.jpeg" width="400">
-<img src="/samples/2D/9_2D.jpeg" width="400"> <img src="/samples/3D/7_3D.jpeg" width="400">
+<img src="/samples/2D/7_2D.jpeg" width="400"> <img src="/samples/3D/7_3D.jpeg" width="400">
+<img src="/samples/2D/9_2D.jpeg" width="400"> <img src="/samples/3D/9_3D.jpeg" width="400">
 <img src="/samples/2D/12_2D.jpeg" width="400"> <img src="/samples/3D/12_3D.jpeg" width="400">
 <img src="/samples/2D/14_2D.jpeg" width="400"> <img src="/samples/3D/14_3D.jpeg" width="400">
 
