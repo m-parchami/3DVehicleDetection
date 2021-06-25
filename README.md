@@ -1,14 +1,13 @@
 # 3D Vehicle Detection
 
-![Demo Gif](./samples/demo.gif)
-
 ## Table of Contents :deciduous_tree:
 1. [Introduction](./README.md#Introduction)
 2. [2D Vehicle Detection](./README.md#2D--Vehicle--Detection)
 3. [3D Vehicle Detection](./README.md#3D--Vehicle--Detection)
 4. [Tables](./README.md#Tables)
 5. [Figures](./README.md#Figures)
-6. [References](./README.md#References)
+6. [Demo](./README.md#Demo)
+7. [References](./README.md#References)
 
 ## Introduction :red_car:
 The main purpose of this repository is to provide an unofficial implementation of the 3D vehicle detection framework introduced in the "[3D Bounding Box Estimation Using Deep Learning and Geometry](https://arxiv.org/abs/1612.00496v1)" paper.
@@ -106,6 +105,9 @@ Translation vector estimation accuracy.
 <img src="/samples/2D/12_2D.jpeg" width="400"> <img src="/samples/3D/12_3D.jpeg" width="400">
 <img src="/samples/2D/14_2D.jpeg" width="400"> <img src="/samples/3D/14_3D.jpeg" width="400">
 
+## Demo :clapper:
+
+![Demo Gif](https://mparchami.com/3D_Vehicle_Detection_demo.gif)
 
 # References :clap:
 ### Papers and Datasets
