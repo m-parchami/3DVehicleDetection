@@ -46,7 +46,7 @@ The rest of the workflow, such as setting up the environment, creating TFRecords
 
 ## 3D Vehicle Detection :package:
 
-For implementing this section, I started with an unofficial implementation (check the references). My main focus was to make modifications for improving the accuracy of the model. I also tried my best to clean up the code. I also made sure that most of the functions and segments are documented. In the future, I try to add brief descriptions to this readme as well. Indeed, it is best to read the original paper and implement it yourself with as few hints as possible.
+For implementing this section, I started with an [unofficial implementation](./README.md#References). My main focus was to make modifications for improving the accuracy of the model. I also tried my best to clean up the code and add documentation so that it is more useful. In the future, I try to add brief descriptions to this readme as well. Indeed, it is best to read the original paper and implement it yourself with as few hints as possible.
 
 My final results are described in table 2 and 3. The final 3D boxes can be seen in [figure 1](./README.md#Figures) on the right.
 
