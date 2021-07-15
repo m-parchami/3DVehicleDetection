@@ -51,7 +51,7 @@ For implementing this section, I started with an [unofficial implementation](./R
 
 My final results are described in table 2 and 3. The final 3D boxes can be seen in [figure 1](./README.md#Figures) on the right.
 
-## Tables
+## Tables :bar_chart:
 ### Table 1
 Evaluation results of training two object detectors.
 + Train size: 6981 images.
@@ -80,7 +80,7 @@ Evaluation results of training the 3D network with two different feature extract
 
 **Disclaimer**: These results do not necessarily relate to model's overall performance and capabilities. One may achieve better results with either by modifying parameters or longer training. This is not a reliable comparison of the two models.
 
-### Table 3 :bar_chart:
+### Table 3
 Translation vector estimation accuracy.
 
 + Error metric: L2_norm(true - pred)
