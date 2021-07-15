@@ -2,8 +2,8 @@
 
 ## Table of Contents :deciduous_tree:
 1. [Introduction](#Introduction)
-2. [2D Vehicle Detection](./README.md#2d-vehicle-detection-blue_square)
-3. [3D Vehicle Detection](./README.md3d-vehicle-detection-package)
+2. [2D Vehicle Detection](#2d-vehicle-detection-blue_square)
+3. [3D Vehicle Detection](#3d-vehicle-detection-package)
 4. [Tables](#Tables-bar_chart)
 5. [Figures](#Figures-eyes)
 6. [Demo](#Demo-clapper)
