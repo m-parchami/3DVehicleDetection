@@ -1,7 +1,7 @@
 # 3D Vehicle Detection
 
 ## Table of Contents :deciduous_tree:
-1. [Introduction](./README.md#Introduction)
+1. [Introduction](#Introduction)
 2. [2D Vehicle Detection](./README.md#2D--Vehicle--Detection)
 3. [3D Vehicle Detection](./README.md#3D--Vehicle--Detection)
 4. [Tables](./README.md#Tables)
@@ -9,7 +9,7 @@
 6. [Demo](./README.md#Demo)
 7. [References](./README.md#References)
 
-## Introduction :red_car:
+## Introduction
 The main purpose of this repository is to provide an unofficial implementation of the 3D vehicle detection framework introduced in the "[3D Bounding Box Estimation Using Deep Learning and Geometry](https://arxiv.org/abs/1612.00496v1)" paper.
 
 The paper mainly focuses on the 3D bounding box estimation from given 2D detections. However, in this repository, we also look into the 2D detection part, train our own model with Tensorflow Object Detection API, and test it together with the rest of the framework.
