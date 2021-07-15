@@ -4,10 +4,10 @@
 1. [Introduction](#Introduction)
 2. [2D Vehicle Detection](./README.md#2d-vehicle-detection-blue_square)
 3. [3D Vehicle Detection](./README.md3d-vehicle-detection-package)
-4. [Tables](#Tables)
+4. [Tables](#Tables-bar_chart)
 5. [Figures](#Figures-eyes)
 6. [Demo](#Demo-clapper)
-7. [References](./README.md#References)
+7. [References](#References-clap)
 
 ## Introduction  :red_car:
 The main purpose of this repository is to provide an unofficial implementation of the 3D vehicle detection framework introduced in the "[3D Bounding Box Estimation Using Deep Learning and Geometry](https://arxiv.org/abs/1612.00496v1)" paper.
@@ -80,7 +80,7 @@ Evaluation results of training the 3D network with two different feature extract
 
 **Disclaimer**: These results do not necessarily relate to model's overall performance and capabilities. One may achieve better results with either by modifying parameters or longer training. This is not a reliable comparison of the two models.
 
-### Table 3
+### Table 3 :bar_chart:
 Translation vector estimation accuracy.
 
 + Error metric: L2_norm(true - pred)
