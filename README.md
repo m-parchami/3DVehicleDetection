@@ -114,6 +114,6 @@ A [short video demo](https://m-parchami.github.io/3DVehicleDetection_Demo.mp4) o
 - [3D Bounding Box Estimation Using Deep Learning and Geometry](https://arxiv.org/abs/1612.00496)
 - [KITTI Dataset (raw)](http://www.cvlibs.net/datasets/kitti/raw_data.php) and their [2D object Dataset](http://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=2d)
 ### Codes and Tools
-- [https://github.com/smallcorgi/3D-Deepbox/issues](github.com/smallcorgi/3D-Deepbox/issues)
-- [https://github.com/cersar/3D_detection](github.com/cersar/3D_detection)
+- [https://github.com/smallcorgi/3D-Deepbox/issues](https://github.com/smallcorgi/3D-Deepbox/issues)
+- [https://github.com/cersar/3D_detection](https://github.com/cersar/3D_detection)
 - [Tensorflow Object Detection API](github.com/tensorflow/models) + [Pretrained models(model zoo)](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf1_detection_zoo.md)
